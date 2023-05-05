@@ -10,7 +10,7 @@
       <v-col
         v-for="(product, index) in products"
         :key="index"
-        cols="3"
+        cols="2"
       >
         <v-sheet class="">
             <productCardVue 
@@ -42,14 +42,14 @@
         data() {
             return {
                 products: [
-                    {Title: 'Airbrush', picUrl: require('../assets/Airbrush-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Celeb', picUrl: require('../assets/Celebrity-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Dewy', picUrl: require('../assets/Dewy-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Editorial', picUrl: require('../assets/Editorial-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'HD', picUrl: require('../assets/HD-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Matte', picUrl: require('../assets/Matte-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Nude', picUrl: require('../assets/Nude-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Permanent', picUrl: require('../assets/Permanent-Makeup.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}
+                    {Title: 'Airbrush', picUrl: require('../assets/look-1.jpg'), Price: 15, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Celeb', picUrl: require('../assets/look-2.jpg'), Price: 35, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Dewy', picUrl: require('../assets/look-3.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Editorial', picUrl: require('../assets/look-4.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'HD', picUrl: require('../assets/look-5.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Matte', picUrl: require('../assets/look-1.jpg'), Price: 60, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Nude', picUrl: require('../assets/look-2.jpg'), Price: 10, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Permanent', picUrl: require('../assets/look-3.jpg'), Price: 30, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}
                 ]
             }
         },
