@@ -8,11 +8,14 @@
     </ul>
 </template>
     
-    <script>
+<script>
     export default {
-      name: 'BookingView',
-      props: {
+        name: 'BookingView',
+        props: {
         msg: String
-      }
+        },
+        mounted() {
+        document.title = 'Karen\'s Kit - Booking'; 
+        }
     }
-    </script>
+</script>

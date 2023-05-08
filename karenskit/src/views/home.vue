@@ -10,8 +10,11 @@
   
  <script>
 export default {
-  name: 'HomeView',
-  props: {
-  }
+    name: 'HomeView',
+    props: {
+    },
+    mounted() {
+        document.title = 'Karen\'s Kit - Home'; 
+    }
 }
 </script>

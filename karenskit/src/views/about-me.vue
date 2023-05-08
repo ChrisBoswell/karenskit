@@ -9,8 +9,11 @@
     
 <script>
     export default {
-    name: 'AboutMeView',
-    props: {
-    }
+        name: 'AboutMeView',
+        props: {
+        },
+        mounted() {
+            document.title = 'Karen\'s Kit - About Me'; 
+        }
     }
 </script>

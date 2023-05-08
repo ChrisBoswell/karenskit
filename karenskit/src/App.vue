@@ -6,10 +6,10 @@
       <v-app-bar-nav-icon><router-link to="/">K</router-link></v-app-bar-nav-icon>
       <!-- <v-toolbar-title>Karen's Kit</v-toolbar-title> -->
       <v-spacer></v-spacer>
-      <v-btn><router-link to="/booking">Booking</router-link></v-btn>
-      <v-btn><router-link to="/products">Products</router-link></v-btn>
-      <v-btn><router-link to="/about-me">About Me</router-link></v-btn>
-      <v-btn><router-link to="/">Home</router-link></v-btn>
+      <router-link active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
+      <router-link class="mr-2 px-1" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
+      <router-link class="mr-2 px-1" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
+      <router-link class="mr-2 px-1" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
     </v-app-bar>
     <v-content> 
       <v-container>
@@ -37,5 +37,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+
+a.active-link button {
+  border: 2px solid white !important;
+  border-radius: 0%;
+  text-decoration: none !important
+}
+
+a button:hover {
+  /* text-decoration: underline solid; */
+  border-bottom: 2px solid;
+  border-radius: 0%;
+
 }
 </style>
