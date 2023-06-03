@@ -9,12 +9,17 @@
 </template>
   
  <script>
-export default {
-    name: 'HomeView',
-    props: {
-    },
-    mounted() {
-        document.title = 'Karen\'s Kit - Home'; 
+    // import { ref, onMounted } from 'vue';
+
+    export default {
+        name: 'HomeView',
+        props: {
+        },
+        mounted() {
+            document.title = 'Karen\'s Kit - Home';
+
+        },
+        setup() {
+        }
     }
-}
 </script>

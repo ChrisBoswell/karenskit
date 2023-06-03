@@ -1,32 +1,52 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto"> -->
-  <v-app>
-    <v-app-bar density="compact" app color="black">
-      <!-- <v-app-bar-nav-icon><img alt="Vue logo" src="../assets/logo.png" class="mx-auto"></v-app-bar-nav-icon> -->
-      <v-app-bar-nav-icon><router-link to="/">K</router-link></v-app-bar-nav-icon>
-      <!-- <v-toolbar-title>Karen's Kit</v-toolbar-title> -->
-      <v-spacer></v-spacer>
-      <router-link active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
-      <router-link class="mr-2 px-1" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
-      <router-link class="mr-2 px-1" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
-      <router-link class="mr-2 px-1" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
-    </v-app-bar>
-    <v-content> 
-      <v-container>
-        <router-view></router-view>
-      </v-container>
-    </v-content>
-  </v-app>
+  <div v-if="loadAnimation">
+    <v-app>
+      <v-app-bar density="compact" app color="black">
+        <!-- <v-app-bar-nav-icon><img alt="Vue logo" src="../assets/logo.png" class="mx-auto"></v-app-bar-nav-icon> -->
+        <v-app-bar-nav-icon><router-link to="/">K</router-link></v-app-bar-nav-icon>
+        <!-- <v-toolbar-title>Karen's Kit</v-toolbar-title> -->
+        <v-spacer></v-spacer>
+        <router-link active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
+        <router-link class="mr-2 px-1" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
+        <router-link class="mr-2 px-1" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
+        <router-link class="mr-2 px-1" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
+      </v-app-bar>
+      <v-content> 
+        <v-container>
+          <router-view></router-view>
+        </v-container>
+      </v-content>
+    </v-app>
+  </div>
+  <div v-if="!loadAnimation">
+      <LoadAnimationVue />
+  </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+  import { ref, onMounted } from 'vue';
+  import LoadAnimationVue from '@/components/LoadAnimation.vue';
 
-export default {
-  name: 'App',
-  components: {
+  export default {
+    name: 'App',
+    components: {
+      LoadAnimationVue
+    },
+    setup() {
+      const loadAnimation = ref(false)
+      
+      onMounted(() => {
+          setTimeout(() => {
+              loadAnimation.value = !loadAnimation.value;
+          }, 3000);
+      });
+
+      return{
+          loadAnimation
+      }
+    }
   }
-}
 </script>
 
 <style>

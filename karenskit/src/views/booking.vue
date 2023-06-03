@@ -15,7 +15,7 @@
         msg: String
         },
         mounted() {
-        document.title = 'Karen\'s Kit - Booking'; 
+            document.title = 'Karen\'s Kit - Booking'; 
         }
     }
 </script>
