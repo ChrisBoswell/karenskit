@@ -2,10 +2,14 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto"> -->
   <div v-if="loadAnimation">
     <v-app>
-      <v-app-bar density="compact" app color="black">
-        <!-- <v-app-bar-nav-icon><img alt="Vue logo" src="../assets/logo.png" class="mx-auto"></v-app-bar-nav-icon> -->
-        <v-app-bar-nav-icon><router-link to="/">K</router-link></v-app-bar-nav-icon>
-        <!-- <v-toolbar-title>Karen's Kit</v-toolbar-title> -->
+      <v-app-bar density="compact" app color="black" >
+        <!-- <router-link  class="w-1/2" active-class="active-link" to="/">
+          <img alt="Karen's Kit logo" src="./assets/KarensKit_Logo_Top.jpg" class="w-1/2 float-left">
+        </router-link> -->
+        <router-link class="w-1/6" to="/">
+          <!-- <v-btn></v-btn> -->
+          <img alt="Karen's Kit logo" src="./assets/KarensKit_Logo_Top.jpg" class="w-auto float-left">
+        </router-link>
         <v-spacer></v-spacer>
         <router-link active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
         <router-link class="mr-2 px-1" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
@@ -13,7 +17,7 @@
         <router-link class="mr-2 px-1" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
       </v-app-bar>
       <v-content> 
-        <v-container>
+        <v-container fluid="true">
           <router-view></router-view>
         </v-container>
       </v-content>
@@ -39,7 +43,7 @@
       onMounted(() => {
           setTimeout(() => {
               loadAnimation.value = !loadAnimation.value;
-          }, 3000);
+          }, 6000);
       });
 
       return{

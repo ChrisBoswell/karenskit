@@ -8,7 +8,7 @@
                     @enter="KarenEnter"
                 >
                     <v-col>
-                        <p>Karen's Kit</p>
+                        <img src="../assets/KarensKit_Logo_Top.jpg" alt="/">
                     </v-col>
                 </Transition>
                 <!-- <Transition 
@@ -32,7 +32,7 @@
                     @enter="MakeupEnter"
                 >
                     <v-col>
-                        Professional Makeup Artist
+                        <img src="../assets/KarensKit_Logo_Bottom.jpg" alt="/">
                     </v-col>
                 </Transition>
             </v-row>
@@ -70,32 +70,32 @@
             let t1 = gsap.timeline()
             t1.to(el, {
                 opacity: 1,
-                x: 0,
-                duration: 1,
+                x: '20vw',
+                duration: 3,
                 animationTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)',
-                delay: 0.1
+                delay: 0.4
             }).to(el, {
                 opacity: 0,
                 x: '60vw',
-                duration: 1,
+                duration: 3,
                 animationTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)',
-                delay: 0.1
+                delay: 0.3
             })
         },
         MakeupEnter(el){
             let t1 = gsap.timeline()
             t1.to(el, {
                 opacity: 1,
-                x: 0,
-                duration: 1,
+                x: '20vw',
+                duration: 3,
                 animationTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)',
-                delay: 0.1
+                delay: 0.4
             }).to(el, {
                 opacity: 0,
                 x: '-60vw',
-                duration: 1,
+                duration: 3,
                 animationTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)',
-                delay: 0.1
+                delay: 0.3
             })
         },
         
