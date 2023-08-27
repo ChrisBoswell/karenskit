@@ -21,6 +21,23 @@
           <router-view></router-view>
         </v-container>
       </v-content>
+      <v-footer height="12" class="bg-black mt-40">
+        <v-row justify="center" no-gutters>
+          <v-btn
+            v-for="link in links"
+            :key="link"
+            color="white"
+            variant="text"
+            class="mx-2"
+            rounded="xl"
+          >
+            {{ link }}
+          </v-btn>
+          <v-col class="text-center mt-4" cols="12">
+            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          </v-col>
+        </v-row>
+      </v-footer>
     </v-app>
   </div>
   <div v-if="!loadAnimation">
