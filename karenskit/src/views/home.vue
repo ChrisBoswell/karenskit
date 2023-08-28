@@ -1,29 +1,10 @@
 <template>
-    <div class="flex flex-row rounded-lg justify-between" style="background-color: #d7d2cf;">
-        <div class="basis-1/2 rounded p-4">
-            <div class="flex">
-                <div class="text-4xl">Karen's Kit</div>
-            </div>
-            <hr>
-            <div class="flex text-xl mt-3 p-3">
-                Lorum Ipsum
-                Lorum Ipsum
-                Lorum Ipsum
-                Lorum Ipsum
-                Lorum Ipsum
-                Lorum Ipsum
-            </div>
-        </div>
-        <div class="basis-1/2">
-            <div class="p-6">
-                <video class="mx-auto rounded-lg" controls="false" autoplay="true">
-                    <source src="../assets/temp-video.mp4" type="video/mp4">
-                    <!-- <source src="movie.ogg" type="video/ogg"> -->
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <!-- <img class="overflow-hidden rounded-lg ml-auto mr-6" style="height: 85vh;" src="../assets/Karen_Full_Cutout.png" alt="Professional Makeup Artist"> -->
-        </div>
+    <div class="video-container -mt-12 -ml-12">
+        <video autoplay muted loop>
+            <source src="../assets/temp-video.mp4" type="video/mp4">
+            <!-- <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> -->
+        </video>
+        
     </div>
     <div class="flex mt-6">
         <div class="px-3 mx-auto">
@@ -167,4 +148,29 @@
 .carousel__image :hover {
     scale: 1.5;
 }
+
+.video-container {
+    height: 100vh;
+    width: 105vw;
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #dc0000;
+  padding: 0px;
+}
+
+
 </style>
