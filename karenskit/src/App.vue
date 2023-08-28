@@ -3,19 +3,30 @@
   <div v-if="loadAnimation">
     <v-app>
       <v-app-bar density="compact" app color="black" >
-        <!-- <router-link  class="w-1/2" active-class="active-link" to="/">
-          <img alt="Karen's Kit logo" src="./assets/KarensKit_Logo_Top.jpg" class="w-1/2 float-left">
-        </router-link> -->
         <router-link class="w-1/6" to="/">
-          <!-- <v-btn></v-btn> -->
           <img alt="Karen's Kit logo" src="./assets/KarensKit_Logo_Top.jpg" class="w-auto float-left">
         </router-link>
         <v-spacer></v-spacer>
-        <router-link active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
-        <router-link class="mr-2 px-1" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
-        <router-link class="mr-2 px-1" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
-        <router-link class="mr-2 px-1" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
+        <v-app-bar-nav-icon class="mr-2 px-1 hidden-md-and-up"  @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <router-link class="hidden-md-and-down" active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
       </v-app-bar>
+      <v-navigation-drawer temporary app v-model="drawer" location="right">
+        <v-list-item>
+          <router-link active-class="active-link" to="/">Home</router-link>
+        </v-list-item>
+        <v-list-item>
+          <router-link class="mr-2 px-1" active-class="active-link" to="/products">Products</router-link>
+        </v-list-item>
+        <v-list-item>
+          <router-link class="mr-2 px-1" active-class="active-link" to="/booking">Booking</router-link>
+        </v-list-item>
+        <v-list-item>
+          <router-link class="mr-2 px-1" active-class="active-link" to="/about-me">About Me</router-link>
+        </v-list-item>
+      </v-navigation-drawer>
       <v-content> 
         <v-container fluid="true">
           <router-view></router-view>
@@ -23,19 +34,18 @@
       </v-content>
       <v-footer height="12" class="bg-black mt-40">
         <v-row justify="center" no-gutters>
-          <v-btn
-            v-for="link in links"
-            :key="link"
-            color="white"
-            variant="text"
-            class="mx-2"
-            rounded="xl"
-          >
-            {{ link }}
-          </v-btn>
-          <v-col class="text-center mt-4" cols="12">
-            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-          </v-col>
+          <a class="border text-light bg-black rounded-lg p-4 cursor-pointer mt-4" href="https://www.instagram.com" target="_blank">
+            <v-icon icon="mdi-instagram" />
+          </a>
+          <a class="border text-light bg-black rounded-lg p-4 cursor-pointer mt-4" href="https://www.facebook.com" target="_blank">
+            <v-icon icon="mdi-facebook" />
+          </a>
+          <a class="border text-light bg-black rounded-lg p-4 cursor-pointer mt-4" href="mailto:someone@example.com">
+            <v-icon icon="mdi-email" />
+          </a>
+          <a class="border text-light bg-black rounded-lg p-4 cursor-pointer mt-4" href="https://www.tiktok.com" target="_blank">
+            <v-icon icon="mdi-tiktok"/>
+          </a>
         </v-row>
       </v-footer>
     </v-app>
@@ -45,27 +55,46 @@
   </div>
 </template>
 
-<script>
+<script setup>
+  
+</script>
+
+<script >
   import { ref, onMounted } from 'vue';
   import LoadAnimationVue from '@/components/LoadAnimation.vue';
+  // import { Vuetify } from 'vue';
+  // import { useDisplay } from 'vuetify'
+  // Destructure only the keys you want to use
+  // const { mobile } = useDisplay()
 
   export default {
     name: 'App',
     components: {
       LoadAnimationVue
     },
+    data() {
+      return {
+        drawer: false
+      };
+    },
     setup() {
       const loadAnimation = ref(false)
-      
+      // console.log(this.$vuetify)
+      // console.log(mobile)
       onMounted(() => {
-          setTimeout(() => {
-              loadAnimation.value = !loadAnimation.value;
-          }, 6000);
+         // 960
+        // console.log(mobile.value) // true
+        setTimeout(() => {
+            loadAnimation.value = !loadAnimation.value;
+        }, 10);
       });
 
       return{
           loadAnimation
       }
+    },
+    computed: {
+      
     }
   }
 </script>

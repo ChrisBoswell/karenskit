@@ -6,7 +6,7 @@
     </div>
     <hr>
     <div class="flex flex-row mt-5">
-        <div class="basis-1/2">
+        <div class="basis-1/2 hidden-md-and-down">
             <iframe class="mx-auto" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&title=My%20Schedule&showTz=0&showCalendars=0&showPrint=0&src=OWM5M2RiNzc0YTRmYTFkMDQyNTRhMTUxN2FhZmEwZjMxMzgwYWQzZTM3NTUxMDM3Y2UxNDhmZWE2OTBhNDUwOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E&color=%237986CB" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </div>        
         <div class="basis-1/2">

@@ -30,7 +30,6 @@
     
 <script>
     import productCardVue from '@/components/productCard.vue';
-    // import { gsap } from 'gsap';
 
     export default {
         name: 'BookingView',
@@ -49,14 +48,15 @@
             return {
                 show: true,
                 products: [
-                    {Title: 'Airbrush', picUrl: require('../assets/look-1.jpg'), Price: 15, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Celeb', picUrl: require('../assets/look-2.jpg'), Price: 35, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Dewy', picUrl: require('../assets/look-3.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Editorial', picUrl: require('../assets/look-4.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'HD', picUrl: require('../assets/look-5.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
-                    {Title: 'Matte', picUrl: require('../assets/look-1.jpg'), Price: 60, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Nude', picUrl: require('../assets/look-2.jpg'), Price: 10, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
-                    {Title: 'Permanent', picUrl: require('../assets/look-3.jpg'), Price: 30, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}
+                    {Title: 'Airbrush', picUrl: require('../assets/carousel_images/customer_1.jpg'), Price: 15, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Celeb', picUrl: require('../assets/carousel_images/customer_2.jpg'), Price: 35, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Dewy', picUrl: require('../assets/carousel_images/customer_3.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Editorial', picUrl: require('../assets/carousel_images/customer_4.jpg'), Price: 20, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'HD', picUrl: require('../assets/carousel_images/customer_5.jpg'), Price: 50, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}, 
+                    {Title: 'Matte', picUrl: require('../assets/carousel_images/customer_6.jpg'), Price: 60, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Nude', picUrl: require('../assets/carousel_images/customer_7.jpg'), Price: 10, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Permanent', picUrl: require('../assets/carousel_images/customer_8.jpg'), Price: 30, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'},
+                    {Title: 'Permanent', picUrl: require('../assets/carousel_images/customer_9.jpg'), Price: 30, FlavorText: 'Perfect for wedings', Description: 'I use only the best products!'}
                 ]
             }
         },
