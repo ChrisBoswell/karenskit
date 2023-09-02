@@ -2,7 +2,6 @@
     <div class="video-container-mobile lg:video-container xl:video-container -mt-4 h-1/2 overflow-hidden">
         <video class="w-screen -mt-1" autoplay muted loop>
             <source src="../assets/karenkit_intro.mp4" type="video/mp4">
-            <!-- <source src="../assets/karenkit_intro.mov.mov" type="video/quicktime"> -->
         </video>
     </div>
     <div class="flex mt-6">
