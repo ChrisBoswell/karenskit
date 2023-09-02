@@ -1,38 +1,40 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" class="mx-auto"> -->
   <div v-if="loadAnimation">
-    <v-app>
+    <v-app class="pa-0">
       <v-app-bar density="compact" app color="black" >
-        <router-link class="w-1/6" to="/">
+        <router-link class="xl:w-1/5 lg:w-1/5 w-2/5" to="/">
           <img alt="Karen's Kit logo" src="./assets/KarensKit_Logo_Top.jpg" class="w-auto float-left">
         </router-link>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon class="mr-2 px-1 hidden-md-and-up"  @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <router-link class="hidden-md-and-down" active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
-        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
-        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
-        <router-link class="mr-2 px-1 hidden-md-and-down" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
+        <router-link class="hidden-sm-and-down" active-class="active-link" to="/"><v-btn>Home</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-sm-and-down" active-class="active-link" to="/products"><v-btn>Products</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-sm-and-down" active-class="active-link" to="/booking"><v-btn>Booking</v-btn></router-link>
+        <router-link class="mr-2 px-1 hidden-sm-and-down" active-class="active-link" to="/about-me"><v-btn>About Me</v-btn></router-link>
       </v-app-bar>
       <v-navigation-drawer temporary app v-model="drawer" location="right">
-        <v-list-item>
+        <v-list-item class="bg-dark">
           <router-link active-class="active-link" to="/">Home</router-link>
         </v-list-item>
+        <v-divider></v-divider>
         <v-list-item>
-          <router-link class="mr-2 px-1" active-class="active-link" to="/products">Products</router-link>
+          <router-link class="" active-class="active-link" to="/products">Products</router-link>
         </v-list-item>
+        <v-divider></v-divider>
         <v-list-item>
-          <router-link class="mr-2 px-1" active-class="active-link" to="/booking">Booking</router-link>
+          <router-link class="" active-class="active-link" to="/booking">Booking</router-link>
         </v-list-item>
+        <v-divider></v-divider>
         <v-list-item>
-          <router-link class="mr-2 px-1" active-class="active-link" to="/about-me">About Me</router-link>
+          <router-link class="" active-class="active-link" to="/about-me">About Me</router-link>
         </v-list-item>
+        <v-divider></v-divider>
       </v-navigation-drawer>
       <v-content> 
-        <v-container fluid="true">
           <router-view></router-view>
-        </v-container>
       </v-content>
-      <v-footer height="12" class="bg-black mt-40">
+      <v-footer height="12" class="bg-black mt-40 w-screen">
         <v-row justify="center" no-gutters>
           <a class="border text-light bg-black rounded-lg p-4 cursor-pointer mt-4" href="https://www.instagram.com" target="_blank">
             <v-icon icon="mdi-instagram" />

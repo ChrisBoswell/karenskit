@@ -1,7 +1,7 @@
 <template>
     <div>About me</div>
     <ul>
-        <li>Where From</li>
+        <li>Where From?</li>
         <li>School</li>
         <li>Why hair</li>
     </ul>

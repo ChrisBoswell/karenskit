@@ -1,13 +1,11 @@
 <template>
-    <div class="video-container -mt-12 -ml-12">
-        <video autoplay muted loop>
+    <div class="video-container-mobile lg:video-container xl:video-container -mt-4 h-1/2 overflow-hidden">
+        <video class="w-screen -mt-1" autoplay muted loop>
             <source src="../assets/temp-video.mp4" type="video/mp4">
-            <!-- <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> -->
         </video>
-        
     </div>
     <div class="flex mt-6">
-        <div class="px-3 mx-auto">
+        <div class="mx-auto">
             <div class="col-12  position-relative">
                 <div class="gradient-left" />
                 <div class="gradient-right" />
@@ -151,7 +149,12 @@
 
 .video-container {
     height: 100vh;
-    width: 105vw;
+    width: 100vw;
+    position: relative;
+}
+.video-container-mobile {
+    height: auto;
+    width: 100vw;
     position: relative;
 }
 
